@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uploading with Multer</title>
+
+</head>
+<script>
+  fetch('http://localhost:3000/files')
+  .then(response => response.json())
+  .then(data => {document.getElementById('apk-file').innerHTML = "<a href='" + data + "'>Download" + '</a>'});
+</script>
+<body>
+
+<div>
+
+ <!--  SINGLE FILE -->
+<form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
+   <input type="file" name="paigam" />
+   <input type="submit" value="Upload a file"/>
+</form>
+</div>
+
+<br />
+
+<div id="apk-file"></div>
+
+</body>
+
+
+
+</html>
+
+
+
